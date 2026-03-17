@@ -33,6 +33,9 @@ RUN npm ci --omit=dev \
 # 从 builder 阶段拷贝编译后的产物
 COPY --from=builder --chown=cursor:nodejs /app/dist ./dist
 
+# 拷贝前端静态资源（日志查看器 Web UI）
+COPY --chown=cursor:nodejs public ./public
+
 # 创建日志目录并授权
 RUN mkdir -p /app/logs && chown cursor:nodejs /app/logs
 
