@@ -34,7 +34,7 @@ cursor_model: "anthropic/claude-sonnet-4.6"
 # 不配置此项时：跟随客户端请求，proxy 默认自动补上 enabled
 # 环境变量: THINKING_ENABLED=true|false
 thinking:
-  enabled: true
+  enabled: false
 
 # ==================== 历史消息压缩配置 ====================
 # 对话过长时自动压缩早期消息，释放输出空间，防止 Cursor 上下文溢出
