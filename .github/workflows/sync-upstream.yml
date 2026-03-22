@@ -71,5 +71,8 @@ jobs:
   publish:
     needs: sync
     if: needs.sync.outputs.changed == 'true'
+    permissions:
+      contents: read
+      packages: write
     uses: ./.github/workflows/docker-publish.yml
     secrets: inherit
